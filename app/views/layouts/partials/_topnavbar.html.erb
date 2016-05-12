@@ -1,0 +1,55 @@
+<!-- START Top Navbar-->
+<nav class="uk-navbar uk-margin-large-bottom">
+    <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href=""><%= t('title.homepage')%></a></li>
+        <li><a href="">Link</a></li>
+        <li class="uk-parent"><a href="">Parent</a></li>
+    </ul>
+    <ul class="uk-navbar-nav">
+        <!-- 这是关联了JavaScript的容器 -->
+        <li class="uk-parent" data-uk-dropdown>
+            <!-- 拨动下拉菜单的菜单项 -->
+            <a href="">DropDown</a>
+            <!-- 这是下拉菜单 -->
+            <div class="uk-dropdown uk-dropdown-navbar">
+                <ul class="uk-nav uk-nav-navbar">
+                    <li><a href="">1st</a></li>
+                    <li><a href="">2nd</a></li>
+                    <li><a href="">3rd</a></li>
+                    <li><a href="">4th</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div class="uk-dropdown">
+      <ul class="uk-nav uk-nav-dropdown">
+        <li class="uk-active"><a href="">Active</a></li>
+        <li><a href="">Link</a></li>
+        <li class="uk-parent"><a href="">Parent</a></li>
+      </ul>
+    </div>
+</nav>
+<nav class="uk-navbar">
+    <li class="uk-active"><a href="" class="uk-navbar-brand"><%= t('title.homepage')%></a></li>
+    <ul class="uk-navbar-nav">
+        <!-- 这是关联了JavaScript的容器 -->
+        <li class="uk-parent" data-uk-dropdown>
+            <!-- 拨动下拉菜单的菜单项 -->
+            <a href="">DropDown</a>
+            <!-- 这是下拉菜单 -->
+            <div class="uk-dropdown uk-dropdown-navbar">
+                <ul class="uk-nav uk-nav-navbar">
+                    <li><a href="">1st</a></li>
+                    <li><a href="">2nd</a></li>
+                    <li><a href="">3rd</a></li>
+                    <li><a href="">4th</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <ul class="uk-navbar-nav">Link1</ul>
+    <div class="uk-navbar-content">Link2</div>
+    
+    <a href="" class="uk-navbar-toggle">Parent</a>
+</nav>
+<!-- END Top Navbar-->

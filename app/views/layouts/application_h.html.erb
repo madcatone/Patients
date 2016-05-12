@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+   <div class="uk-grid">
+      <!-- top navbar-->
+      <div class="uk-width-medium-1-1">
+        <%= render partial: "layouts/partials/navbar" %>
+      </div>
+      <!-- sidebar-->
+      <div class="uk-width-medium-1-6">
+        <%= render partial: "layouts/partials/leftsidebar" %>
+      </div>
+      <!-- Page content-->
+      <div class="uk-width-medium-5-6">
+        <%= yield %>
+      </div>
+   </div>
+      <!-- Page footer-->
+      <footer>
+         <%#= render partial: "layouts/partials/footer" %>
+      </footer>
+    </div>
+</body>
+</html>

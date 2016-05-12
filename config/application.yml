@@ -1,0 +1,9 @@
+#百度翻译设置
+baidu_fanyi:
+  appid: '20160503000020127'
+  secretkey: 'SZ8sAknPqd87qFo7V3VW'
+  #host: "http://openapi.baidu.com/public/2.0/bmt/translate?"
+  host: "http://api.fanyi.baidu.com/api/trans/vip/translate?"
+  from: "zh"
+  to: "en"
+

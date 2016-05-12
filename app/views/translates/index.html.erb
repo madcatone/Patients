@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Translate</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @translates.each do |translate| %>
+      <tr>
+        <td><%= translate.name %></td>
+        <td><%= translate.contact %></td>
+        <td><%= translate.result %></td>
+        <td><%= link_to 'Show', translate %></td>
+        <td><%= link_to 'Edit', edit_translate_path(translate) %></td>
+        <td><%= link_to 'Destroy', translate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My scaffold', new_translate_path %>

@@ -1,0 +1,12 @@
+namespace :redis do
+	%w(stop start start_no_deamonize restart killall load_ok).each do |task_name|
+	  desc "#{task } redis"
+
+	  task task_name do
+	    on roles(:app), in: :sequence, wait: 2 do
+	      execute "/home/root/ihop/bin/background_jobs  #{task_name}"
+	    end
+	  end
+	end
+end
+

@@ -1,0 +1,37 @@
+/! START Top Navbar
+nav.uk-navbar
+  ul.uk-navbar-nav
+    | <li class="
+    = 'uk-active' if controller?('comments')
+    | ">
+    a.uk-navbar-brand href="#{root_path}" = t('title.homepage')
+    | <li class="
+    = 'uk-active' if controller?('translates')
+    | ">
+    a.uk-navbar-brand href="#{translates_path}" = 'Photos'
+    li
+      a.uk-navbar-brand href="" = 'Screenshots'
+    li
+      a.uk-navbar-brand href="" = 'Support'
+    li
+      a.uk-navbar-brand href="" = 'Pricing'
+  ul.uk-navbar-nav
+    /! 这是关联了JavaScript的容器
+    li.uk-parent data-uk-dropdown="" 
+      /! 拨动下拉菜单的菜单项
+      a href=""  DropDown
+      /! 这是下拉菜单
+      .uk-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href=""  1st
+          li
+            a href=""  2nd
+          li
+            a href=""  3rd
+          li
+            a href=""  4th
+  ul.uk-navbar-nav Link1
+  .uk-navbar-content Link2
+  a.uk-navbar-toggle href=""  Parent
+/! END Top Navbar

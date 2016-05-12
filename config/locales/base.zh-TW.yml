@@ -1,0 +1,132 @@
+"zh-TW":
+    hello_world: 哈囉
+    title:
+        homepage: 首頁
+        guide: 導覽
+        team: 車隊
+        driver: 司機
+        vehicle: 車輛
+        fatigue: 報警數據
+        chart: 圖表統計
+        map: 報警車輛定位
+        speed: 超速報警
+        machine: 設備表
+        device: 參數設定
+    dashboard:
+        list: 首頁
+        count: 則
+        car: 車輛
+        fatigue: 疲勞報警
+        mobile: 打手機報警
+        attend: 出勤
+    form:
+        update: 更新
+        submit: 提交
+        back: 返回
+        prev: 上一頁
+        next: 下一頁
+        on: 開啟
+        off: 關閉
+        new: 新增
+        show: 查看
+        edit: 編輯
+        delete: 刪除
+        must: 必填
+        make_sure: 確定要執行這個動作？
+        male: 男
+        female: 女
+        plz_select: 請選擇
+        plz_research: 請重新搜索
+        start_date: 起始時間
+        end_date: 結束時間
+    common:
+        key_word: 關鍵字
+        by_date: 按日期
+        search: 搜索
+        mobile: 手機
+        phone: 電話
+        address: 地址
+        created_at: 創建時間
+        operate: 操作
+        plate: 車牌號碼
+        sim: sim卡序號
+        time: 時間
+        total_count: 總共數據
+        export: 匯出
+        type: 類型
+        version: 版本信息
+    admin:
+        please: 請登入後台
+        password: 密碼
+        hint_login: 請使用郵箱或帳號名稱
+        remember: 記住帳密
+        login: 登入
+        logout: 登出登入身份
+        login_as: 登入身份
+        event: 活動管理
+        account_setting: 帳號設定
+        email: 郵箱
+        new_password: 新密碼
+        new_password_comfirm: 新密碼確認
+        account_name: 帳號名稱
+        alarm_switch: 報警提醒
+        origin_password: 原始密碼
+        forget_password: 忘記密碼？
+        sign_up: 註冊新帳號 
+        feedback: 意見反映
+        hint_new: 若不變更密碼請留白
+        hint_origin: 請輸入密碼以確認變更個人資料
+    teams:
+        team_list: 車隊數據
+        team_name: 車隊名稱
+        PIC: 負責人
+    drivers:
+        driver_list: 司機數據
+        gender: 性別
+        age: 年齡
+        name: 姓名
+        driver_age: 駕車年資
+    vehicles:
+        vehicle_list: 車輛數據
+        brand: 廠牌
+        car_type: 車型
+        belongs_team: 所屬車隊
+        sim_on_car: 車上設備sim卡號
+    fatigues:
+        fatigue_list: 報警數據
+        total: 全部
+        with_pic: 上報有圖
+        with_loc: 上報有座標
+        by_alarm_type: 按報警類型
+        by_type: 報警類型
+        none: 無
+        fatigue: 疲勞
+        mobile: 打手機
+        smoke: 抽煙
+        other: 其他類型
+        lnglat: 座標
+        f_value: 疲勞值
+        speed: 時速
+        xyz: 加速度
+        pic_upload: 圖片上傳
+        location: 上報位置
+        location_incorrect: GPS上報位置錯誤
+        last_time: 上報時間
+        week_export: 本週匯出
+        month_export: 本月匯出
+        year_export: 年度匯出
+    machines:
+        machine_list: 設備數據
+        online: 在線
+        offline: 離線
+        device_bind: 設備綁定
+        last_time: 最後上報時間
+    charts:
+        chart_list: 圖表統計
+        flot: 時間統計
+        flotcount: 次數統計
+        thisweek: 本週 
+        thismonth: 本月
+        lastmonth: 前月
+        thisyear: 本年度
+        lastyear: 去年度
