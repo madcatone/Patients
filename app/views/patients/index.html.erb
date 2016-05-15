@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('title.patient')%></h1>
+
+<table class="">
+  <thead>
+    <tr>
+      <th><%= t('patient.fullname')%></th>
+      <th><%= t('patient.birth_at')%></th>
+      <th><%= t('patient.medical_record_no')%></th>
+      <th><%= t('patient.gender')%></th>
+      <th><%= t('patient.status')%></th>
+      <th><%= t('patient.location')%></th>
+      <th><%= t('patient.view_count')%></th>
+      <th colspan="3"><%= t('form.operate')%></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= fullname(patient.first_name, patient.middle_name, patient.last_name)%></td>
+        <td><%= age?(patient.birth_at) %></td>
+        <td><%= mr_no(patient.medical_record_no) %></td>
+        <td><%= gender(patient.gender) %></td>
+        <td><%= status(patient.status) %></td>
+        <td><%= patient.location.name %></td>
+        <td><%= patient.view_count %></td>
+        <td><%= link_to t('form.show'), patient %></td>
+        <td><%= link_to t('form.edit'), edit_patient_path(patient) %></td>
+        <td><%= link_to t('form.destroy'), patient, method: :delete, data: { confirm: t('form.make_sure') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('form.new'), new_patient_path %>

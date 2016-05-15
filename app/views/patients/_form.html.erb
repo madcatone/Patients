@@ -1,0 +1,56 @@
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name, t('patient.first_name') %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name, t('patient.middle_name') %><br>
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name, t('patient.last_name') %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_at, t('patient.birth_at') %><br>
+    <%#= f.text_area :birth_at %>
+    <%#= f.text_field :birth_at, data-uk-datepicker="{format:'DD.MM.YYYY'}" %>
+    <input type="" data-uk-datepicker="{format:'DD.MM.YYYY'}" name="patient[birth_at]" value="<%= @patient.birth_at.try(:strftime, '%m.%d.%Y')%>"
+  </div>
+  <div class="field">
+    <%#= f.label :medical_record_no %><br>
+    <%#= f.text_area :medical_record_no %>
+  </div>
+    <div class="field">
+    <%= f.label :gender, t('patient.gender') %><br>
+    <label><%= f.radio_button :gender, 'male', {} %><%= t('form.male')%></label>
+    <label><%= f.radio_button :gender, 'female', {} %><%= t('form.female')%></label>
+    <label><%= f.radio_button :gender, 'not available', {} %><%= t('form.not_available')%></label>
+  </div>
+    <div class="field">
+    <%= f.label :status, t('patient.status') %><br>
+    <%= f.select :status,
+         {t('patient.initial') => '1', t('patient.referred') => '2', t('patient.treatment') => '3', t('patient.closed') => '4'}, {:include_blank => t('form.plz_select')}, {:class => ''} rescue ''%>
+  </div>
+    <div class="field">
+    <%= f.label :location_id, t('patient.location') %><br>
+    <%= f.select :location_id,
+         options_from_collection_for_select(Location.all, 'id', 'name'), {:include_blank => t('form.plz_select')}, {:class => ''} rescue ''%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
