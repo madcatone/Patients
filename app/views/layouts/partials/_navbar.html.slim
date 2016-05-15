@@ -10,9 +10,11 @@ nav.uk-navbar
     | ">
     a.uk-navbar-brand href="#{translates_path}" = 'Photos'
     li
-      a.uk-navbar-brand href="" = 'Screenshots'
+      /a.uk-navbar-brand href="" = 'Screenshots'
+      = link_to "简体中文", :controller => controller_name, :action => action_name, :locale => "zh-CN"
     li
-      a.uk-navbar-brand href="" = 'Support'
+      /a.uk-navbar-brand href="" = 'Support'
+      = link_to "English", :controller => controller_name, :action => action_name, :locale => "en"
     li
       a.uk-navbar-brand href="" = 'Pricing'
   ul.uk-navbar-nav
