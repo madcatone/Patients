@@ -80,3 +80,5 @@ gem 'slim'
 # mina
 gem 'mina'
 gem 'mina-unicorn', :require => false
+
+gem 'bootstrap-datetimepicker-rails'
