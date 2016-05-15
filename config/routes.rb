@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :comments
   resources :translates
-  root 'comments#index'
+  resources :patients
+  root 'patients#index'
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
