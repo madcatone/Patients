@@ -11,13 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503091501) do
+ActiveRecord::Schema.define(version: 20160513153938) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.string   "context",    limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string   "first_name",        limit: 255,                 null: false
+    t.string   "middle_name",       limit: 255
+    t.string   "last_name",         limit: 255,                 null: false
+    t.date     "birth_at"
+    t.string   "medical_record_no", limit: 255
+    t.string   "gender",            limit: 255
+    t.string   "status",            limit: 255,                 null: false
+    t.integer  "location_id",       limit: 4,                   null: false
+    t.integer  "view_count",        limit: 4
+    t.boolean  "deletion",                      default: false, null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
   end
 
   create_table "roles", force: :cascade do |t|
