@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= render :partial => 'head' %>
+</h1>
+
+<p>
+  <strong><%= t('location.code')%></strong>
+  <%= @location.code %>
+</p>
+
+<p>
+  <strong><%= t('location.name')%></strong>
+  <%= @location.name %>
+</p>
+
+
+<strong><%= t('title.patient')%></strong><br>
+<% @locations.patients.each do |p| %>
+<%= fullname(p.first_name, p.middle_name, p.last_name) %>
+<br>
+<% end %>
+
+
+
+
+
+<%#= link_to t('form.edit'), edit_location_path(@location) %>
+<%#= link_to t('form.back'), locations_path %>
