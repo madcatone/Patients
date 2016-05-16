@@ -8,16 +8,16 @@ nav.uk-navbar
     | <li class="
     = 'uk-active' if controller?('translates')
     | ">
-    a.uk-navbar-brand href="#{translates_path}" = 'Photos'
+    /a.uk-navbar-brand href="#{translates_path}" = 'Translate'
     li
       /a.uk-navbar-brand href="" = 'Screenshots'
       = link_to "简体中文", :controller => controller_name, :action => action_name, :locale => "zh-CN"
     li
       /a.uk-navbar-brand href="" = 'Support'
       = link_to "English", :controller => controller_name, :action => action_name, :locale => "en"
-    li
+    /li
       a.uk-navbar-brand href="" = 'Pricing'
-  ul.uk-navbar-nav
+  /ul.uk-navbar-nav
     /! 这是关联了JavaScript的容器
     li.uk-parent data-uk-dropdown="" 
       /! 拨动下拉菜单的菜单项
@@ -33,7 +33,7 @@ nav.uk-navbar
             a href=""  3rd
           li
             a href=""  4th
-  ul.uk-navbar-nav Link1
-  .uk-navbar-content Link2
-  a.uk-navbar-toggle href=""  Parent
+  /ul.uk-navbar-nav Link1
+  /.uk-navbar-content Link2
+  /a.uk-navbar-toggle href=""  Parent
 /! END Top Navbar
