@@ -1,11 +1,12 @@
 class Patient < ActiveRecord::Base
   belongs_to :location
 
-  after_create :mr
+  #after_create :mr
 
   scope :active,  -> { where(deletion: false) }
   scope :deletion,  -> { where(deletion: true) }
 
+  # no use
   def mr
     mr_no = ''
     case self.id.to_s.length
