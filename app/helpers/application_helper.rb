@@ -36,14 +36,29 @@ module ApplicationHelper
   end
   ##########################
   def fullname(first, middle, last)
-    "#{first}, #{middle}, #{last}"
+    "#{last}, #{first} #{middle}"
   end
   def age?(birth_at)
     now = Time.now.utc.to_date
     now.year - birth_at.year - (birth_at.to_date.change(:year => now.year) > now ? 1 : 0)
   end
-  def mr_no(medical_record_no)
-    'MR' + medical_record_no rescue ''
+  def mr_no(id)
+    mr_no = ''
+    case id.to_s.length
+    when 1
+      mr_no = '00000'+ id.to_s
+    when 2
+      mr_no = '0000'+ id.to_s
+    when 3
+      mr_no = '000'+ id.to_s
+    when 4
+      mr_no = '00'+ id.to_s
+    when 5
+      mr_no = '0'+ id.to_s
+    when 6
+      mr_no =  id.to_s
+    end
+    'MR' + mr_no rescue ''
   end
   def status(status)
     case status
