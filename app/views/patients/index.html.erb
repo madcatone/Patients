@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th><%= t('patient.fullname')%></th>
-      <th><%= t('patient.birth_at')%></th>
+      <th><%= t('patient.age')%></th>
       <th><%= t('patient.medical_record_no')%></th>
       <th><%= t('patient.gender')%></th>
       <th><%= t('patient.status')%></th>
@@ -21,10 +21,10 @@
       <tr>
         <td><%= fullname(patient.first_name, patient.middle_name, patient.last_name)%></td>
         <td><%= age?(patient.birth_at) %></td>
-        <td><%= mr_no(patient.medical_record_no) %></td>
+        <td><%= mr_no(patient.id) %></td>
         <td><%= gender(patient.gender) %></td>
         <td><%= status(patient.status) %></td>
-        <td><%= patient.location.name %></td>
+        <td><%= link_to patient.location.name, location_path(patient.location_id) %></td>
         <td><%= patient.view_count %></td>
         <td><%= link_to t('form.show'), patient %></td>
         <td><%= link_to t('form.edit'), edit_patient_path(patient) %></td>

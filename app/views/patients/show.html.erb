@@ -5,19 +5,36 @@
 </h1>
 
 <p>
-  <strong>Name:</strong>
-  <%= @patient.first_name %>
+  <strong><%= t('patient.fullname')%></strong>
+  <%= fullname(@patient.first_name, @patient.middle_name, @patient.last_name) %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong><%= t('patient.age')%></strong>
   <%= @patient.gender %>
 </p>
 
 <p>
-  <strong>Result:</strong>
+  <strong><%= t('patient.medical_record_no')%></strong>
   <%= @patient.status %>
 </p>
+<p>
+  <strong><%= t('patient.gender')%></strong>
+  <%= @patient.gender %>
+</p>
+<p>
+  <strong><%= t('patient.status')%></strong>
+  <%= @patient.status %>
+</p>
+<p>
+  <strong><%= t('patient.location')%></strong>
+  <%= @patient.location.name %>
+</p>
+<p>
+  <strong><%= t('patient.view_count')%></strong>
+  <%= @patient.view_count %>
+</p>
+
 
 <%= link_to t('form.edit'), edit_patient_path(@patient) %> |
 <%= link_to t('form.back'), patients_path %>
