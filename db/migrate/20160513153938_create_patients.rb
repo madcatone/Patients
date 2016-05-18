@@ -7,8 +7,8 @@ class CreatePatients < ActiveRecord::Migration
       t.date    "birth_at"
       t.string  "medical_record_no"
       t.string  "gender"
-      t.string  "status",null: false
-      t.integer "location_id",null: false
+      t.string  "status", null: false
+      t.integer "location_id", null: false
       t.integer "view_count"
       t.boolean "deletion", default: false, null: false
 

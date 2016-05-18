@@ -1,5 +1,11 @@
 # Patients
 
+## 0. 產生Location
+```
+rake db:seed
+```
+
+
 ## 1. 病人/Patients
 
 字段名  | 英文名 | 字段类型 |主键 |备注

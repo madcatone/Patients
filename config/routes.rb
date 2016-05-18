@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :translates
   resources :patients
   resources :locations , only: [:show]
   root 'patients#index'
