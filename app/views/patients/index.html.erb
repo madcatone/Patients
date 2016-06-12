@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
 <h1><%= t('title.patient')%></h1>
 
+<%= render_react_component('MyComponent.js', :name => 'Hypernova The Renderer', params: @patients) %>
 <table class="">
   <thead>
     <tr>

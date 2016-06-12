@@ -82,3 +82,5 @@ gem 'mina'
 gem 'mina-unicorn', :require => false
 
 gem 'bootstrap-datetimepicker-rails'
+# hypernova
+gem 'hypernova'

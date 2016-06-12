@@ -1,5 +1,6 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  around_filter :hypernova_render_support
 
   # GET /patients
   def index
